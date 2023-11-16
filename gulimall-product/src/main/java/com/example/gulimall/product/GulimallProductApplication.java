@@ -1,18 +1,17 @@
 package com.example.gulimall.product;
 
-import org.apache.naming.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
 @SpringBootApplication
-public class GulimallProdctApplication {
+public class GulimallProductApplication {
 
     private final Environment environment;
 
     @Autowired
-    public GulimallProdctApplication(Environment environment) {
+    public GulimallProductApplication(Environment environment) {
         this.environment = environment;
     }
 
@@ -22,7 +21,7 @@ public class GulimallProdctApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(GulimallProdctApplication.class, args);
+        SpringApplication.run(GulimallProductApplication.class, args);
 
     }
 

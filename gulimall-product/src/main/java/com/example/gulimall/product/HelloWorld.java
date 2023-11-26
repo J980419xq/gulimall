@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cglib.proxy.Enhancer;
 
 import java.util.HashMap;
@@ -17,9 +18,8 @@ import java.util.concurrent.*;
 public class HelloWorld {
     private volatile static HelloWorld hello;
 
-    private HelloWorld(){
+    private HelloWorld() {}
 
-    }
     private static HelloWorld getInstance() {
         if (hello == null) {
             synchronized (HelloWorld.class) {
@@ -34,7 +34,10 @@ public class HelloWorld {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         Future<?> future =  executorService.submit(new Task());
         future.get();
+        final int a;
+        a = 5;
         executorService.execute(new Task());
+        executorService.shutdown();
     }
 
 
@@ -75,15 +78,14 @@ public class HelloWorld {
     }
 }
 
+@Slf4j
 class Task implements Runnable {
 
     @Override
     public void run() {
-        try {
-            System.out.println("进入了task方法！！！");
-            int i = 1 / 0;
-        } catch (Exception e) {
-            System.out.println("捕获异常");
-        }
+        System.out.println("进入了task方法！！！");
+        int a = 1 / 0;
+        System.out.println("task方法结束");
+
     }
 }

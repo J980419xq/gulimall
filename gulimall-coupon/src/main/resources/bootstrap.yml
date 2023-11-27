@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: gulimall-coupon
+  cloud:
+    nacos:
+      config:
+        server-addr: 47.111.138.125:8848
+        file-extension: yml
+        namespace: f7dd2a2d-822e-4059-8e3c-e7e1f8380c27
+        group: dev
+        ext-config:
+          - data-id: datasource.yml
+            group: dev
+            refresh: true
+
+coupon:
+  user:
+    name: lpj
+    age: 25
+

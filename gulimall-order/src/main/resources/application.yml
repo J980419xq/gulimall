@@ -4,8 +4,6 @@ spring:
     password: "root"
     url: jdbc:mysql://47.111.138.125:3306/gulimall_oms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
-  main:
-    allow-circular-references: true
   cloud:
     nacos:
       discovery:

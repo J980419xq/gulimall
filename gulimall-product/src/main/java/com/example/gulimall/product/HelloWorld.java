@@ -1,5 +1,6 @@
 package com.example.gulimall.product;
 
+import com.google.gson.Gson;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +17,7 @@ import java.util.concurrent.*;
 
 @Data
 public class HelloWorld {
+    private static Gson gson = new Gson();
     private volatile static HelloWorld hello;
 
     private HelloWorld() {}
@@ -31,6 +33,11 @@ public class HelloWorld {
         return hello;
     }
     public static void main(String[] args) throws ExecutionException, InterruptedException {
+        Private p = Private.getInstance();
+        System.out.println(p);
+        String json = gson.toJson(p);
+        Private aPrivate = gson.fromJson(json, Private.class);
+        System.out.println(aPrivate);
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         Future<?> future =  executorService.submit(new Task());
         future.get();

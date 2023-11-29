@@ -10,9 +10,15 @@ spring:
     nacos:
       discovery:
         server-addr: 47.111.138.125:8848
+    alicloud:
+      access-key: LTAI4G4W1RA4JXz2QhoDwHhi                  #阿里云的access-key
+      secret-key: R99lmDOJumF2x43ZBKT259Qpe70Oxw
+      oss:
+        endpoint: oss-cn-shanghai.aliyuncs.com
+        bucket: gulimall-hello                              #阿里云对象存储服务创建的桶
 
   application:
-    name: gulimall-product
+    name: gulimall-third-party
 
 
 mybatis-plus:
@@ -26,7 +32,7 @@ mybatis-plus:
       logic-not-delete-value: 0
 
 server:
-  port: 10000
+  port: 30000
 
 logging:
   level:

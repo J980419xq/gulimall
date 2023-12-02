@@ -84,14 +84,11 @@ public class CategoryBrandRelationServiceImpl extends ServiceImpl<CategoryBrandR
 
         List<CategoryBrandRelationEntity> catelogId = relationDao.selectList(new QueryWrapper<CategoryBrandRelationEntity>().eq("catelog_id", catId));
 
-        List<BrandEntity> collect = catelogId.stream().map(item -> {
+        return catelogId.stream().map(item -> {
             Long brandId = item.getBrandId();
             //查询品牌的详情
-            BrandEntity byId = brandService.getById(brandId);
-            return byId;
+            return brandService.getById(brandId);
         }).collect(Collectors.toList());
-
-        return collect;
     }
 
 }

@@ -31,3 +31,9 @@ server:
 logging:
   level:
     com.example.gulimall.product: info
+
+gulimall:
+  thread:
+    coreSize: 20
+    maxSize: 200
+    keepAliveTime: 10

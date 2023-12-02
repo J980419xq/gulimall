@@ -51,7 +51,7 @@ public class BrandEntity implements Serializable {
 	 */
 //	@Pattern()
 	@NotNull(groups = {AddGroup.class, UpdateStatusGroup.class})
-	@ListValue(vals={0,1},groups = {AddGroup.class, UpdateStatusGroup.class})
+	@ListValue(vals={0,1},groups = {AddGroup.class, UpdateStatusGroup.class})                         //自定义校验器
 	private Integer showStatus;
 	/**
 	 * 检索首字母

@@ -14,6 +14,9 @@ spring:
   application:
     name: gulimall-product
 
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
@@ -34,6 +37,6 @@ logging:
 
 gulimall:
   thread:
-    coreSize: 20
-    maxSize: 200
-    keepAliveTime: 10
+    core-size: 20
+    max-size: 200
+    keep-alive-time: 10

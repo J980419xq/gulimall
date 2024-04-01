@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.common.utils.R;
 import com.example.gulimall.product.controller.AttrGroupController;
 import com.example.gulimall.product.controller.BrandController;
+import com.example.gulimall.product.controller.SkuInfoController;
+import com.example.gulimall.product.controller.SpuInfoController;
 import com.example.gulimall.product.entity.BrandEntity;
 import com.example.gulimall.product.service.BrandService;
 
@@ -33,10 +35,18 @@ public class GulimallProductApplicationTests {
     @Autowired
     AttrGroupController attrGroupController;
 
+    @Autowired
+    SpuInfoController spuInfoController;
+
+    @Autowired
+    SkuInfoController skuInfoController;
+
+
     @Test
     public void contextLoads() {
         Map<String, Object> params = new HashMap<>();
-        R list = brandController.list(params);
+        params.put("max", "6000");
+        R list = skuInfoController.list(params);
         log.info(gson.toJson(list));
         System.out.println("jxq");
     }

@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.111.138.125:8848
+  application:
+    name: gulimall-search
+
+  redis:
+    host: 47.111.138.125
+    port: 6379
+
+server:
+  port: 12000

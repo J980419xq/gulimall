@@ -1,13 +1,10 @@
 package com.example.gulimall.product;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.common.utils.R;
-import com.example.gulimall.product.controller.AttrGroupController;
-import com.example.gulimall.product.controller.BrandController;
-import com.example.gulimall.product.controller.SkuInfoController;
-import com.example.gulimall.product.controller.SpuInfoController;
-import com.example.gulimall.product.entity.BrandEntity;
-import com.example.gulimall.product.service.BrandService;
+import com.example.gulimall.product.app.AttrGroupController;
+import com.example.gulimall.product.app.BrandController;
+import com.example.gulimall.product.app.SkuInfoController;
+import com.example.gulimall.product.app.SpuInfoController;
 
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -17,9 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @SpringBootTest

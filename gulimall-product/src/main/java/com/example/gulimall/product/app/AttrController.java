@@ -1,4 +1,4 @@
-package com.example.gulimall.product.controller;
+package com.example.gulimall.product.app;
 
 import com.example.common.utils.PageUtils;
 import com.example.common.utils.R;

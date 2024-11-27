@@ -10,5 +10,8 @@ spring:
     host: 47.111.138.125
     port: 6379
 
+  thymeleaf:
+    cache: false
+
 server:
   port: 12000

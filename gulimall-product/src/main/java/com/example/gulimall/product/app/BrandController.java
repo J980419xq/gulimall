@@ -77,7 +77,6 @@ public class BrandController {
 //        }else {
 //
 //        }
-
         brandService.save(brand);
 
 
@@ -94,6 +93,7 @@ public class BrandController {
 
         return R.ok();
     }
+
     /**
      * 修改状态
      */

@@ -32,6 +32,7 @@ public class AttrAttrgroupRelationServiceImpl extends ServiceImpl<AttrAttrgroupR
 
     /**
      * 批量添加属性与分组关联关系
+     *
      * @param vos
      */
     @Override
@@ -39,10 +40,10 @@ public class AttrAttrgroupRelationServiceImpl extends ServiceImpl<AttrAttrgroupR
 
         List<AttrAttrgroupRelationEntity> collect = vos.stream()
                 .map((item) -> {
-            AttrAttrgroupRelationEntity relationEntity = new AttrAttrgroupRelationEntity();
-            BeanUtils.copyProperties(item, relationEntity);
-            return relationEntity;
-        }).collect(Collectors.toList());
+                    AttrAttrgroupRelationEntity relationEntity = new AttrAttrgroupRelationEntity();
+                    BeanUtils.copyProperties(item, relationEntity);
+                    return relationEntity;
+                }).collect(Collectors.toList());
 
         this.saveBatch(collect);
 

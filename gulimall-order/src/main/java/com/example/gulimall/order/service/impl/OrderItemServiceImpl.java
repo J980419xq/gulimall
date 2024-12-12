@@ -11,6 +11,7 @@ import com.example.gulimall.order.entity.OrderReturnReasonEntity;
 import com.example.gulimall.order.service.OrderItemService;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
